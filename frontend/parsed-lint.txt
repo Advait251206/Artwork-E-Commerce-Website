@@ -1,0 +1,68 @@
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\components\UploadModal.tsx
+  Line 10: Unexpected any. Specify a different type.
+  Line 85: Unexpected any. Specify a different type.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\feature-flags\deviceCapability.ts
+  Line 30: Unexpected any. Specify a different type.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\observability\performanceMonitor.ts
+  Line 45: Unexpected any. Specify a different type.
+  Line 46: Unexpected any. Specify a different type.
+  Line 61: 'e' is defined but never used.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\AdminDashboard.tsx
+  Line 17: Unexpected any. Specify a different type.
+  Line 27: Error: Cannot access variable before it is declared
+
+`fetchData` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\AdminDashboard.tsx:27:5
+  25 |       return;
+  26 |     }
+> 27 |     fetchData();
+     |     ^^^^^^^^^ `fetchData` accessed before it is declared
+  28 |   }, [user, navigate]);
+  29 |
+  30 |   const fetchData = async () => {
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\AdminDashboard.tsx:30:3
+  28 |   }, [user, navigate]);
+  29 |
+> 30 |   const fetchData = async () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 31 |     setLoading(true);
+     | ^^^^^^^^^^^^^^^^^^^^^
+> 32 |     await Promise.all([fetchStats(), fetchArtworks()]);
+     | ^^^^^^^^^^^^^^^^^^^^^
+> 33 |     setLoading(false);
+     | ^^^^^^^^^^^^^^^^^^^^^
+> 34 |   };
+     | ^^^^^ `fetchData` is declared here
+  35 |
+  36 |   const fetchStats = async () => {
+  37 |     try {
+  Line 28: React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\ArtistProfile.tsx
+  Line 8: Unexpected any. Specify a different type.
+  Line 9: Unexpected any. Specify a different type.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\Dashboard.tsx
+  Line 11: Unexpected any. Specify a different type.
+  Line 13: Unexpected any. Specify a different type.
+  Line 22: React Hook useEffect has a missing dependency: 'fetchMyArtworks'. Either include it or remove the dependency array.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\Profile.tsx
+  Line 34: Unexpected any. Specify a different type.
+  Line 50: Unexpected any. Specify a different type.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\auth\Login.tsx
+  Line 43: Unexpected any. Specify a different type.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\auth\Register.tsx
+  Line 35: Unexpected any. Specify a different type.
+  Line 68: Unexpected any. Specify a different type.
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\router\index.tsx
+  Line 50: Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.

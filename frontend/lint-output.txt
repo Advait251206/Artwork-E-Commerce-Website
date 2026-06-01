@@ -1,0 +1,57 @@
+
+> frontend@0.0.0 lint
+> eslint .
+
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\components\UploadModal.tsx
+  10:14  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  85:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\feature-flags\deviceCapability.ts
+  30:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\observability\performanceMonitor.ts
+  45:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  46:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\AdminDashboard.tsx
+  71:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\AdminDashboard.tsx:71:5
+  69 |       return;
+  70 |     }
+> 71 |     fetchData();
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  72 |   }, [user, navigate, fetchData]);
+  73 |
+  74 |   const handleModerate = async (id: string, status: 'APPROVED' | 'REJECTED') => {  react-hooks/set-state-in-effect
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\ArtistProfile.tsx
+  8:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  9:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\Dashboard.tsx
+  34:6  warning  React Hook useEffect has a missing dependency: 'fetchMyArtworks'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\Profile.tsx
+  34:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  50:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\auth\Login.tsx
+  43:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\pages\auth\Register.tsx
+  35:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  68:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\Advait251206\Extra\Artwork Website\frontend\src\router\index.tsx
+  50:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+Γ£û 15 problems (14 errors, 1 warning)
+
