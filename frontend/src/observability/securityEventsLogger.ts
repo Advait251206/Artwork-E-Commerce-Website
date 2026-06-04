@@ -17,7 +17,7 @@ class SecurityEventsLogger {
   // Base throttle: limit 1 log packet per 2000ms per event type
   private THROTTLE_MS = 2000; 
 
-  public log(event: SecurityEvent) {
+  public log(event: SecurityEvent, details?: Record<string, any>) {
     if (!getFeatureFlag('ENABLE_OBSERVABILITY_TELEMETRY')) return;
 
     const now = Date.now();
