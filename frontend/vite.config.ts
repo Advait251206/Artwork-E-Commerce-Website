@@ -47,6 +47,9 @@ export default defineConfig(() => {
     define: {
       // Deterministic Algorithm Hashing for future Backend Synchronization
       __WORKER_ALGO_HASH__: JSON.stringify('v1.2.a_distortion_engine')
+    },
+    build: {
+      chunkSizeWarningLimit: 1600,
     }
   };
 });
