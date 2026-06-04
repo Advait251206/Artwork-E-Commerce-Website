@@ -31,12 +31,12 @@ class SecurityEventsLogger {
     this.lastEventTimestamps.set(event, now);
 
     // In production, send this via fetch
-    // const logData = {
-    //   event,
-    //   timestamp: new Date().toISOString(),
-    //   ...details,
-    // };
-    // console.warn(`[SECURITY TELEMETRY PACKET] ->`, logData);
+    const logData = {
+      event,
+      timestamp: new Date().toISOString(),
+      ...details,
+    };
+    console.warn(`[SECURITY TELEMETRY PACKET] ->`, logData);
   }
 }
 
