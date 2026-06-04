@@ -7,7 +7,7 @@ export async function connectDB(): Promise<void> {
     await mongoose.connect(env.MONGODB_URI);
     logger.info('✅ MongoDB connected');
   } catch (error) {
-    logger.fatal({ error }, '❌ MongoDB connection failed');
-    process.exit(1);
+    logger.error('❌ mongodb not connected');
+    // We don't exit here so the server can still start
   }
 }
