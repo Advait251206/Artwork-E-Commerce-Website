@@ -25,7 +25,7 @@ if (env.NODE_ENV === 'production') {
   app.use(helmet({ contentSecurityPolicy: false }));
 }
 
-app.use(cors({ origin: env.FRONTEND_URL, credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 app.use(mongoSanitize());
 
 // Parsing
